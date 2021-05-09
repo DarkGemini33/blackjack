@@ -47,6 +47,9 @@ def calculate_score(cards):
 # Deal the user and computer 2 cards each using deal_card()
 
 def compare(user_score, computer_score):
+    if user_score > 21 and computer_score > 21:
+        return "You went over. You lose 😱"
+    
     if user_score == computer_score:
         return "Draw"
     elif computer_score == 0:
